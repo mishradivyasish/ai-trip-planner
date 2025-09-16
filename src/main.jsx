@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element:<ViewTrip/>
   },
   {
-  path: "/my-trips",
-  element: <MyTrips />
+  path: '/my-trips',
+  element: <MyTrips/>
 }
 
 ])
