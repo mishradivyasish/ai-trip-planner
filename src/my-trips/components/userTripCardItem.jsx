@@ -1,4 +1,3 @@
-// 👇 Fixed casing in import path
 import { GetPlaceDetails, getPhotoUrl } from '@/service/GlobalApi';
 import { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
@@ -8,7 +7,6 @@ function UserTripCardItem({ trip }) {
   const [photoUrl, setPhotoUrl] = useState('/trip_placeholder.jpeg');
   const [isLoading, setIsLoading] = useState(true);
 
-  // 👉 Fallback: try travelPlan.location first, then userSelection.location
   const location =
     trip?.tripData?.travelPlan?.location || trip?.userSelection?.location;
 
