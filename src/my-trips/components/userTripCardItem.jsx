@@ -54,7 +54,7 @@ function UserTripCardItem({ trip }) {
   }
 
   return (
-    <Link to={`/my-trips/${trip.id}`}>
+    <Link to={`/view-trip/${trip.id}`}>
       <div className="hover:scale-105 transition-all">
         <div className="relative">
           {isLoading && (
@@ -67,7 +67,7 @@ function UserTripCardItem({ trip }) {
             className="object-cover rounded-xl hover:shadow-xl h-[220px] w-full"
             alt={location || 'Trip destination'}
             onError={(e) => {
-              e.currentTarget.src = '/trip_placeholder.jpeg';
+              e.currentTarget.src = '/travelImage.jpg';
               setIsLoading(false);
             }}
             onLoad={() => setIsLoading(false)}
@@ -81,7 +81,7 @@ function UserTripCardItem({ trip }) {
             {trip?.tripData?.travelPlan?.numberOfDays ||
               trip?.tripData?.travelPlan?.duration ||
               trip?.userSelection?.noOfDays}{' '}
-            Days trip with{' '}
+             trip with{' '}
             {trip?.tripData?.travelPlan?.budget || trip?.userSelection?.budget}{' '}
             Budget
           </h2>

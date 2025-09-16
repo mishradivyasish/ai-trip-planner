@@ -74,14 +74,19 @@ function Header() {
       <div>
         {user ? (
           <div className='flex items-center gap-5'>
+          <a href='/my-trips'>
             <Button variant="outline" className='rounded-full'>
               My Trip
-            </Button>
-
+            </Button></a>
+          <a href='/create-trip'>
+            <Button variant="outline" className='rounded-full'>+Create Trip</Button>
+          </a>
             <Popover>
               <PopoverTrigger>
+              
                 <img
                   src={user.picture}
+                  referrerPolicy="no-referrer"
                   className='h-[35px] w-[35px] rounded-full'
                   alt='User'
                 />
