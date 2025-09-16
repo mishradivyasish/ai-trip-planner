@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '../button';
 import { FcGoogle } from "react-icons/fc";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import {
   Dialog,
@@ -74,13 +75,13 @@ function Header() {
       <div>
         {user ? (
           <div className='flex items-center gap-5'>
-          <a href='/my-trips'>
+          <Link to='/my-trips'>
             <Button variant="outline" className='rounded-full'>
               My Trip
-            </Button></a>
-          <a href='/create-trip'>
+            </Button></Link>
+          <Link to='/create-trip'>
             <Button variant="outline" className='rounded-full'>+Create Trip</Button>
-          </a>
+          </Link>
             <Popover>
               <PopoverTrigger>
               
